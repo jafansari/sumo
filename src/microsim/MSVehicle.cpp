@@ -1675,6 +1675,12 @@ MSVehicle::getStopEdges() const {
 
 
 double
+MSVehicle::getBrakeGap() const {
+    return getCarFollowModel().brakeGap(getSpeed());
+}
+
+
+double
 MSVehicle::basePos(const MSEdge* edge) const {
     double result = MIN2(getVehicleType().getLength() + POSITION_EPS, edge->getLength());
     if (hasStops()
@@ -1861,7 +1867,7 @@ MSVehicle::planMoveInternal(const SUMOTime t, MSLeaderInfo ahead, DriveItemVecto
         // check leader on lane
         //  leader is given for the first edge only
         if (opposite &&
-                (leaderLane->getVehicleNumber() > 1
+                (leaderLane->getVehicleNumberWithPartials() > 1
                  || (leaderLane != myLane && leaderLane->getVehicleNumber() > 0))) {
             // find opposite-driving leader that must be respected on the currently looked at lane
             // XXX make sure to look no further than leaderLane

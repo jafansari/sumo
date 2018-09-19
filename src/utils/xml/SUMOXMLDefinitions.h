@@ -532,6 +532,7 @@ enum SumoXMLAttr {
     SUMO_ATTR_LCA_SPEEDGAIN_PARAM,
     SUMO_ATTR_LCA_KEEPRIGHT_PARAM,
     SUMO_ATTR_LCA_SUBLANE_PARAM,
+    SUMO_ATTR_LCA_OPPOSITE_PARAM,
     SUMO_ATTR_LCA_PUSHY,
     SUMO_ATTR_LCA_PUSHYGAP,
     SUMO_ATTR_LCA_ASSERTIVE,
@@ -656,6 +657,8 @@ enum SumoXMLAttr {
     SUMO_ATTR_MINDURATION,
     /// @brief maximum duration of a phase
     SUMO_ATTR_MAXDURATION,
+    /// @brief succesor phase index
+    SUMO_ATTR_NEXT,
     /// @}
 
     /// @name Attributes for junction-internal lanes

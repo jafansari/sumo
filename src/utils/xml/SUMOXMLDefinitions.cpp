@@ -346,6 +346,7 @@ StringBijection<int>::Entry SUMOXMLDefinitions::attrs[] = {
     { "lcSpeedGain",            SUMO_ATTR_LCA_SPEEDGAIN_PARAM },
     { "lcKeepRight",            SUMO_ATTR_LCA_KEEPRIGHT_PARAM },
     { "lcSublane",              SUMO_ATTR_LCA_SUBLANE_PARAM },
+    { "lcOpposite",             SUMO_ATTR_LCA_OPPOSITE_PARAM },
     { "lcPushy",                SUMO_ATTR_LCA_PUSHY },
     { "lcPushyGap",             SUMO_ATTR_LCA_PUSHYGAP },
     { "lcAssertive",            SUMO_ATTR_LCA_ASSERTIVE },
@@ -433,6 +434,7 @@ StringBijection<int>::Entry SUMOXMLDefinitions::attrs[] = {
 
     { "minDur",                 SUMO_ATTR_MINDURATION },
     { "maxDur",                 SUMO_ATTR_MAXDURATION },
+    { "next",                   SUMO_ATTR_NEXT },
     { "foes",                   SUMO_ATTR_FOES },
     // E2 detector
     { "cont",                   SUMO_ATTR_CONT },
